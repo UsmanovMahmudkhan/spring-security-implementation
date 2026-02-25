@@ -1,5 +1,6 @@
 package com.security.Spring.Security.Config;
 
+import com.security.Spring.Security.Bean.AuthProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -15,7 +16,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class Config {
 
-//    @Bean
+    public AuthProvider provider;
+
+    public Config(AuthProvider provider) {
+        this.provider = provider;
+    }
+
+    //    @Bean
 //    public UserDetailsService userDetails(){
 //        var user= User.withUsername("Alena")
 //                .authorities("playing")
@@ -42,6 +49,7 @@ public class Config {
     public SecurityFilterChain chain(HttpSecurity htpp){
         htpp.httpBasic(Customizer.withDefaults());
         htpp.authorizeHttpRequests(c->c.anyRequest().authenticated());
+        htpp.authenticationProvider(provider);
         var user=User.withUsername("john")
                 .password("111")
                 .authorities("Reader")
