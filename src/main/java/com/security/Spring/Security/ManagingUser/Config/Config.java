@@ -1,9 +1,9 @@
-package com.security.Spring.Security.Config;
+package com.security.Spring.Security.ManagingUser.Config;
 
 //import com.security.Spring.Security.Bean.AuthProvider;
-import com.security.Spring.Security.UserDetails.Car;
-import com.security.Spring.Security.UserDetails.SecurityCar;
-import com.security.Spring.Security.UserDetails.SecurityCarService;
+import com.security.Spring.Security.ManagingUser.UserDetails.Car;
+import com.security.Spring.Security.ManagingUser.UserDetails.SecurityCar;
+import com.security.Spring.Security.ManagingUser.UserDetails.SecurityCarService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;

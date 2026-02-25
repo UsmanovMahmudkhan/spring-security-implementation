@@ -1,4 +1,4 @@
-package com.security.Spring.Security.UserDetails;
+package com.security.Spring.Security.ManagingUser.UserDetails;
 
 
 public class Car {

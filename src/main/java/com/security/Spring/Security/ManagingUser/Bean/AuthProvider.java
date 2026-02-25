@@ -1,4 +1,4 @@
-package com.security.Spring.Security.Bean;
+package com.security.Spring.Security.ManagingUser.Bean;
 
 import lombok.SneakyThrows;
 import org.jspecify.annotations.Nullable;

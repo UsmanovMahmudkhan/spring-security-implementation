@@ -1,4 +1,4 @@
-package com.security.Spring.Security.Bean;
+package com.security.Spring.Security.ManagingUser.Bean;
 
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
