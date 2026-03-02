@@ -23,10 +23,9 @@ import java.util.Map;
 @Slf4j
 @ComponentScan("com.security.Spring.Security.MultiAlgo")
 public class Config {
-
+    public Map<String,PasswordEncoder>encoders=new HashMap<>();
     @Bean
     public PasswordEncoder encoder(){
-        Map<String,PasswordEncoder>encoders=new HashMap<>();
         encoders.put("bcrypt",new BCryptPasswordEncoder());
         encoders.put("argon2",new Argon2PasswordEncoder(16,32,2,65536,3));
         DelegatingPasswordEncoder delegating =new DelegatingPasswordEncoder("bcrypt", encoders);
